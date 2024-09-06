@@ -1,0 +1,4 @@
+repository "cardboard@chankocyo@cloud"
+  path "/"
+    br "/main"
+    co "/main"
