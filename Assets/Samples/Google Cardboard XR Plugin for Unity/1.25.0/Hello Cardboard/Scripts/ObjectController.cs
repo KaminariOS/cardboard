@@ -121,14 +121,17 @@ public class ObjectController : MonoBehaviour
         }
     }
 
+    public int score = 0;
     public void OnCollisionEnter() {
-        // TeleportRandomly();
+        interval = 1;
+        score += 1;
+        TeleportRandomly();
     }
 
     public int interval = 10;
     public void Update() {
         interval += 1;
-        if (interval % 100 == 0) {
+        if (interval % 500 == 0) {
             TeleportRandomly();
         }
     }

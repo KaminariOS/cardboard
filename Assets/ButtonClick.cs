@@ -19,11 +19,11 @@ public class ButtonClick : MonoBehaviour
     {
         if (Touchscreen.current.press.isPressed) {
             BallPrefab ball = Instantiate<BallPrefab>(ballPrefab);
-            float delay = 1.0f;
+            float delay = 2.0f;
             ball.transform.localPosition = transform.position;
             ball.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward *UnityEngine.Random.Range(500, 750));
             balls.Add(ball);
-            Object.Destroy(ball, delay);
+            Destroy(ball.gameObject, delay);
         }
         
     }
